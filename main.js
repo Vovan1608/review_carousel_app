@@ -7,7 +7,7 @@ const employee = [
 		job: "web developer",
 		img: "./img/person1.jpg",
 		text:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem repellat tenetur. Quia id dolores quod exercitationem officia beatae ad?",
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 	},
 	{
 		id: 2,
@@ -15,7 +15,7 @@ const employee = [
 		job: "back-end developer",
 		img: "./img/person2.jpg",
 		text:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem repellat tenetur. Quia id dolores quod exercitationem officia beatae ad?",
+			"Corporis quidem repellat tenetur.",
 	},
 	{
 		id: 3,
@@ -23,7 +23,7 @@ const employee = [
 		job: "ui designer",
 		img: "./img/person3.jpg",
 		text:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem repellat tenetur. Quia id dolores quod exercitationem officia beatae ad?",
+			"Quia id dolores quod exercitationem officia beatae ad?",
 	}
 ]
 
@@ -40,7 +40,30 @@ const randBtn = document.querySelector(".random-button");
 let currentItem = 0;
 
 // load initial item
+window.addEventListener("DOMContentLoaded", () => {
+	showPerson(currentItem);
+});
 
-window.addEventListener("DOMContentLoaded", function () {
-	console.log("shajl");
+function showPerson() {
+	const item = employee[currentItem];
+	img.src = item.img;
+	author.textContent = item.name;
+	job.textContent = item.job;
+	info.textContent = item.text;
+}
+
+nextBtn.addEventListener("click", () => {
+	currentItem++;
+	if (currentItem > employee.length - 1) {
+		currentItem = 0;
+	}
+	showPerson(currentItem);
+});
+
+prevBtn.addEventListener("click", () => {
+	currentItem--;
+	if (currentItem < 0) {
+		currentItem = employee.length - 1;
+	}
+	showPerson(currentItem);
 });
