@@ -1,6 +1,6 @@
 "use strict";
 
-const mens = [
+const employee = [
 	{
 		id: 1,
 		name: "vladymyr zenin",
@@ -14,7 +14,7 @@ const mens = [
 		name: "vasya popkin",
 		job: "back-end developer",
 		img: "./img/person2.jpg",
-		text: 
+		text:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem repellat tenetur. Quia id dolores quod exercitationem officia beatae ad?",
 	},
 	{
@@ -23,6 +23,12 @@ const mens = [
 		job: "ui designer",
 		img: "./img/person3.jpg",
 		text:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem repellat tenetur. Quia id dolores quod exercitationem officia beatae ad?"",
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem repellat tenetur. Quia id dolores quod exercitationem officia beatae ad?",
 	}
 ]
+
+const img = document.getElementById("person-img");
+const author = document.getElementById("author");
+const job = document.getElementById("job");
+const info = document.getElementById("info");
+
