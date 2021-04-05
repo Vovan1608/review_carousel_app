@@ -35,3 +35,12 @@ const info = document.getElementById("info");
 const prevBtn = document.querySelector(".prev-button");
 const nextBtn = document.querySelector(".next-button");
 const randBtn = document.querySelector(".random-button");
+
+// set starting item
+let currentItem = 0;
+
+// load initial item
+
+window.addEventListener("DOMContentLoaded", function () {
+	console.log("shajl");
+});
