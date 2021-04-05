@@ -36,12 +36,15 @@ const prevBtn = document.querySelector(".prev-button");
 const nextBtn = document.querySelector(".next-button");
 const randBtn = document.querySelector(".random-button");
 
+function getRandom() {
+	return Math.floor(Math.random() * employee.length);
+}
 // set starting item
 let currentItem = 0;
 
 // load initial item
 window.addEventListener("DOMContentLoaded", () => {
-	showPerson(currentItem);
+	showPerson();
 });
 
 function showPerson() {
@@ -57,7 +60,7 @@ nextBtn.addEventListener("click", () => {
 	if (currentItem > employee.length - 1) {
 		currentItem = 0;
 	}
-	showPerson(currentItem);
+	showPerson();
 });
 
 prevBtn.addEventListener("click", () => {
@@ -65,5 +68,10 @@ prevBtn.addEventListener("click", () => {
 	if (currentItem < 0) {
 		currentItem = employee.length - 1;
 	}
-	showPerson(currentItem);
+	showPerson();
+});
+
+randBtn.addEventListener("click", () => {
+	currentItem = getRandom();
+	showPerson();
 });
