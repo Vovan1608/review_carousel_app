@@ -62,34 +62,23 @@ function getNextPerson() {
 	}
 }
 
-// nextBtn.addEventListener("click", () => {
-// 	currentItem++;
-// 	if (currentItem > employee.length - 1) {
-// 		currentItem = 0;
-// 	}
-// 	showPerson();
-// });
+nextBtn.addEventListener("click", () => {
+	currentItem++;
+	if (currentItem > employee.length - 1) {
+		currentItem = 0;
+	}
+	showPerson();
+});
 
-function getPrevPerson() {
+prevBtn.addEventListener("click", () => {
 	currentItem--;
 	if (currentItem < 0) {
 		currentItem = employee.length - 1;
 	}
-}
-// prevBtn.addEventListener("click", () => {
-// 	currentItem--;
-// 	if (currentItem < 0) {
-// 		currentItem = employee.length - 1;
-// 	}
-// 	showPerson();
-// });
+	showPerson();
+});
 
-function getRandomPerson() {
+randBtn.addEventListener("click", () => {
 	currentItem = getRandom();
 	showPerson();
-}
-
-// randBtn.addEventListener("click", () => {
-// 	currentItem = getRandom();
-// 	showPerson();
-// });
+});
