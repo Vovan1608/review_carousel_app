@@ -32,3 +32,6 @@ const author = document.getElementById("author");
 const job = document.getElementById("job");
 const info = document.getElementById("info");
 
+const prevBtn = document.querySelector(".prev-button");
+const nextBtn = document.querySelector(".next-button");
+const randBtn = document.querySelector(".random-button");
