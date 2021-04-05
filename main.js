@@ -15,7 +15,7 @@ const employee = [
 		job: "back-end developer",
 		img: "./img/person2.jpg",
 		text:
-			"Corporis quidem repellat tenetur.",
+			"Corporis quidem repellat tenetur.Lorem ipsum dolor sit",
 	},
 	{
 		id: 3,
