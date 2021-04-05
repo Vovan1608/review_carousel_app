@@ -55,23 +55,41 @@ function showPerson() {
 	info.textContent = item.text;
 }
 
-nextBtn.addEventListener("click", () => {
+function getNextPerson() {
 	currentItem++;
 	if (currentItem > employee.length - 1) {
 		currentItem = 0;
 	}
-	showPerson();
-});
+}
 
-prevBtn.addEventListener("click", () => {
+// nextBtn.addEventListener("click", () => {
+// 	currentItem++;
+// 	if (currentItem > employee.length - 1) {
+// 		currentItem = 0;
+// 	}
+// 	showPerson();
+// });
+
+function getPrevPerson() {
 	currentItem--;
 	if (currentItem < 0) {
 		currentItem = employee.length - 1;
 	}
-	showPerson();
-});
+}
+// prevBtn.addEventListener("click", () => {
+// 	currentItem--;
+// 	if (currentItem < 0) {
+// 		currentItem = employee.length - 1;
+// 	}
+// 	showPerson();
+// });
 
-randBtn.addEventListener("click", () => {
+function getRandomPerson() {
 	currentItem = getRandom();
 	showPerson();
-});
+}
+
+// randBtn.addEventListener("click", () => {
+// 	currentItem = getRandom();
+// 	showPerson();
+// });
